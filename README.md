@@ -4,7 +4,7 @@ Quick Disclaimer: this script is an edited version of [this one](https://forum.f
 
 This is my first Lua script, lets start with something simple.
 
-Hello everyone, I made this edit a couple of days ago and gave it to the Real Men of Genius community (the owners of the Revolution Life RP servers) so they could use it on their servers, if you play there (my rp name is "Tyreese Wills") you might find this is not completely equal, that's because 1- they have a custom money system they do not use EssentialMode, 2- they edited the messages to their liking and 3- I also made some edits today.
+Hello everyone, I made this edit a couple of days ago and gave it to the Real Men of Genius community (the owners of the Revolution Life RP servers) so they could use it on their servers, if you play there (my rp name is "Tyreese Wills") you might find this is not completely equal, that's because 1- they have a custom money system they do not use EssentialMode, 2- they edited the messages to their liking and 3- I also made some edits after giving them the script.
 
 ### Requirements
 
