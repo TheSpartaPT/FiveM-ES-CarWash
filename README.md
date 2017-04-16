@@ -1,1 +1,1 @@
-# FiveM-EssentialMode-CarWash
+# FiveM [EssentialMode] CarWash
