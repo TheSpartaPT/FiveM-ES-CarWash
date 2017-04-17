@@ -17,3 +17,9 @@ Hello everyone, I made this edit a couple of days ago and gave it to the Real Me
 >2- add this line "    - carwash" on citmp-server.yml under the "AutoStartResources:".
 
 **Extremelly important: step 2 needs to be bellow the "    - essentialmode" line so the requirements load first.**
+
+### Optional
+
+If you wish to edit how much money is spent to wash the car open "carwash_client.lua" with your favorite text editor (notepad++ recomended) and edit the value on the variable "price" to whatever number you want:
+
+![Full size preview](http://image.prntscr.com/image/f289eae816f84ae5918d8035d26b4291.png)
