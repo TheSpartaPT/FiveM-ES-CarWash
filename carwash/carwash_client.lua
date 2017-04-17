@@ -1,10 +1,6 @@
---Settings--
-
-price = 100 -- you may edit this to your liking
-
 --DO-NOT-EDIT-BELLOW-THIS-LINE--
 
-Key = 18 -- ENTER
+Key = 201 -- ENTER
 
 vehicleWashStation = {
 	{26.5906,  -1392.0261,  27.3634},
@@ -41,14 +37,13 @@ Citizen.CreateThread(function ()
 				if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), garageCoords2[1], garageCoords2[2], garageCoords2[3], true ) < 5 then
 					DrawSpecialText("Press [~g~ENTER~s~] to clean your vehicle!")
 					if(IsControlJustPressed(1, Key)) then
-						TriggerServerEvent('carwash:checkmoney', price)
+						TriggerServerEvent('carwash:checkmoney')
 					end
 				end
 			end
 		end
 	end
 end)
-
 
 RegisterNetEvent('carwash:success')
 AddEventHandler('carwash:success', function(price)
@@ -62,6 +57,15 @@ end)
 RegisterNetEvent('carwash:notenoughmoney')
 AddEventHandler('carwash:notenoughmoney', function(moneyleft)
 	msg = "~h~~r~You don't have enough money! $" .. moneyleft .. " left!"
+	DrawSpecialText(msg, 5000)
+	Wait(5000)
+end)
+
+RegisterNetEvent('carwash:free')
+AddEventHandler('carwash:free', function()
+	SetVehicleDirtLevel(GetVehiclePedIsUsing(GetPlayerPed(-1)))
+	SetVehicleUndriveable(GetVehiclePedIsUsing(GetPlayerPed(-1)), false)
+	msg = "Vehicle ~y~Clean~s~ for free!"
 	DrawSpecialText(msg, 5000)
 	Wait(5000)
 end)
