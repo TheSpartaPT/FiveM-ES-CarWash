@@ -18,8 +18,12 @@ Hello everyone, I made this edit a couple of days ago and gave it to the Real Me
 
 **Extremelly important: step 2 needs to be bellow the "    - essentialmode" line so the requirements load first.**
 
-### Optional
+### Optional (notepad++ recommended)
 
-If you wish to edit how much money is spent to wash the car open "carwash_client.lua" with your favorite text editor (notepad++ recommended) and edit the value on the variable "price" to whatever number you want:
+If you wish to make the car wash free open "carwash_server.lua" and edit the value on the variable "enableprice" to "false":
 
-![Full size preview](http://image.prntscr.com/image/f289eae816f84ae5918d8035d26b4291.png)
+![Full size preview](http://image.prntscr.com/image/dd5dda7bfd3e4eca85f1674f20f67128.png)
+
+If you wish to edit how much money is spent to wash the car open "carwash_server.lua" and edit the value on the variable "price" to whatever number you want:
+
+![Full size preview](http://image.prntscr.com/image/ad28c233917a432e901c828ecfde6b10.png)
