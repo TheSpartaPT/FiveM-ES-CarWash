@@ -1,13 +1,24 @@
-RegisterServerEvent('carwash:checkmoney')
+--Settings--
 
-AddEventHandler('carwash:checkmoney', function(price)
+enableprice = true -- true = carwash is paid, false = carwash is free
+
+price = 100 -- you may edit this to your liking. if "enableprice = false" ignore this one
+
+--DO-NOT-EDIT-BELLOW-THIS-LINE--
+
+RegisterServerEvent('carwash:checkmoney')
+AddEventHandler('carwash:checkmoney', function()
 	TriggerEvent('es:getPlayerFromId', source, function(player)
-		if(tonumber(player:money) >= tonumber(price)) then
-			player:removeMoney((price))
-			TriggerClientEvent('carwash:success', source, price)
+		if(enableprice == true) then
+			if(player:money >= price) then
+				player:removeMoney((price))
+				TriggerClientEvent('carwash:success', source, price)
+			else
+				moneyleft = price - player:money
+				TriggerClientEvent('carwash:notenoughmoney', source, moneyleft)
+			end
 		else
-			moneyleft = price - player:money
-			TriggerClientEvent('carwash:notenoughmoney', source, moneyleft)
+			TriggerClientEvent('carwash:free', source)
 		end
 	end)
 end)
