@@ -8,7 +8,7 @@ Hello everyone, I made this edit a couple of days ago and gave it to the Real Me
 
 ### Requirements
 
->EssentialMode Base
+>[EssentialMode Base](https://github.com/FiveM-Scripts/essentialmode)
 
 ### Installation
 
