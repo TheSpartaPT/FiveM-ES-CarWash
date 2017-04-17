@@ -1,6 +1,6 @@
 --Settings--
 
-price = 100 -- you may edit this to your liking and look bellow for the message when the payment was successful too
+price = 100 -- you may edit this to your liking
 
 --DO-NOT-EDIT-BELLOW-THIS-LINE--
 
