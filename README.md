@@ -6,17 +6,17 @@ This is my first Lua script, lets start with something simple.
 
 Hello everyone, I made this edit a couple of days ago and gave it to the Real Men of Genius community (the owners of the Revolution Life RP servers) so they could use it on their servers, if you play there (my rp name is "Tyreese Wills") you might find this is not completely equal, that's because 1- they have a custom money system they do not use EssentialMode, 2- they edited the messages to their liking and 3- I also made some edits after giving them the script.
 
-### Requirements
+### Dependencies
 
 >[EssentialMode Base](https://forum.fivem.net/t/release-essentialmode-base/3665)
 
 ### Installation
 
->1- Drag and Drop the carwash folder into the resources folder;
+>1- Drag and Drop the es_carwash folder into the resources folder;
 >
->2- add this line "    - carwash" on citmp-server.yml under the "AutoStartResources:".
+>2- add this line "start es_carwash" on server.cfg under the other "start (whatever)".
 
-**Extremelly important: step 2 needs to be bellow the "    - essentialmode" line so the requirements load first.**
+**Extremelly important: step 2 needs to be bellow the "start essentialmode" line so the dependencies load first.**
 
 ### Optional (notepad++ recommended)
 
