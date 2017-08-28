@@ -21,37 +21,17 @@ Citizen.CreateThread(function ()
     return
 end)
 
-function carwash_DrawSubtitle(m_text, showtime)
+function es_carwash_DrawSubtitleTimed(m_text, showtime)
 	SetTextEntry_2('STRING')
 	AddTextComponentString(m_text)
 	DrawSubtitleTimed(showtime, 1)
 end
 
-function carwash_DrawNotification(m_text)
+function es_carwash_DrawNotification(m_text)
 	SetNotificationTextEntry('STRING')
 	AddTextComponentString(m_text)
 	DrawNotification(true, false)
 end
-
-RegisterNetEvent('carwash:success')
-AddEventHandler('carwash:success', function (price)
-	WashDecalsFromVehicle(GetVehiclePedIsUsing(GetPlayerPed(-1)), 1.0)
-	msg = "Vehicle ~y~Washed~s~! ~g~-$" .. price .. "~s~!"
-	carwash_DrawNotification(msg)
-end)
-
-RegisterNetEvent('carwash:notenoughmoney')
-AddEventHandler('carwash:notenoughmoney', function (moneyleft)
-	msg = "~h~~r~You don't have enough money! $" .. moneyleft .. " left!"
-	carwash_DrawNotification(msg)
-end)
-
-RegisterNetEvent('carwash:free')
-AddEventHandler('carwash:free', function ()
-	WashDecalsFromVehicle(GetVehiclePedIsUsing(GetPlayerPed(-1)), 1.0)
-	msg = "Vehicle ~y~Washed~s~ for free!"
-	carwash_DrawNotification(msg)
-end)
 
 Citizen.CreateThread(function ()
 	while true do
@@ -61,12 +41,31 @@ Citizen.CreateThread(function ()
 				garageCoords2 = vehicleWashStation[i]
 				DrawMarker(1, garageCoords2[1], garageCoords2[2], garageCoords2[3], 0, 0, 0, 0, 0, 0, 5.0, 5.0, 2.0, 0, 157, 0, 155, 0, 0, 2, 0, 0, 0, 0)
 				if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), garageCoords2[1], garageCoords2[2], garageCoords2[3], true ) < 5 then
-					carwash_DrawSubtitle("Press [~g~ENTER~s~] to wash your vehicle!")
+					es_carwash_DrawSubtitleTimed("Press [~g~ENTER~s~] to wash your vehicle!")
 					if IsControlJustPressed(1, Key) then
-						TriggerServerEvent('carwash:checkmoney')
+						TriggerServerEvent('es_carwash:checkmoney')
 					end
 				end
 			end
 		end
 	end
+end)
+
+RegisterNetEvent('es_carwash:success')
+AddEventHandler('es_carwash:success', function (price)
+	WashDecalsFromVehicle(GetVehiclePedIsUsing(GetPlayerPed(-1)), 1.0)
+	SetVehicleDirtLevel(GetVehiclePedIsUsing(GetPlayerPed(-1)))
+	es_carwash_DrawNotification("Your vehicle was ~y~cleaned~s~! ~g~-$" .. price .. "~s~!")
+end)
+
+RegisterNetEvent('es_carwash:notenoughmoney')
+AddEventHandler('es_carwash:notenoughmoney', function (moneyleft)
+	es_carwash_DrawNotification("~h~~r~You don't have enough money! $" .. moneyleft .. " left!")
+end)
+
+RegisterNetEvent('es_carwash:free')
+AddEventHandler('es_carwash:free', function ()
+	WashDecalsFromVehicle(GetVehiclePedIsUsing(GetPlayerPed(-1)), 1.0)
+	SetVehicleDirtLevel(GetVehiclePedIsUsing(GetPlayerPed(-1)))
+	es_carwash_DrawNotification("Your vehicle was ~y~cleaned~s~ for free!")
 end)
