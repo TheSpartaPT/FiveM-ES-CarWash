@@ -20,10 +20,10 @@ Hello everyone, I made this edit a couple of days ago and gave it to the Real Me
 
 ### Optional (notepad++ recommended)
 
-If you wish to make the car wash free open "carwash_server.lua" and edit the value on the variable "enableprice" to "false":
+If you wish to make the car wash free open "es_carwash_server.lua" and edit the value on the variable "enableprice" to "false":
 
 ![Full size preview](http://image.prntscr.com/image/dd5dda7bfd3e4eca85f1674f20f67128.png)
 
-If you wish to edit how much money is spent to wash the car open "carwash_server.lua" and edit the value on the variable "price" to whatever number you want:
+If you wish to edit how much money is spent to wash the car open "es_carwash_server.lua" and edit the value on the variable "price" to whatever number you want:
 
 ![Full size preview](http://image.prntscr.com/image/ad28c233917a432e901c828ecfde6b10.png)
