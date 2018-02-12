@@ -16,7 +16,7 @@ Hello everyone, I made this edit a couple of days ago and gave it to the Real Me
 >
 >2- add this line "start es_carwash" on server.cfg under the other "start (whatever)".
 
-**Extremelly important: step 2 needs to be bellow the "start essentialmode" line so the dependencies load first.**
+**Extremelly important: if you're using EssentialMode step 2 needs to be bellow the "start essentialmode" line so the dependencies load first.**
 
 ### Optional (notepad++ recommended)
 
