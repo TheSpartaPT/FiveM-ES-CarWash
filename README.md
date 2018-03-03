@@ -9,6 +9,9 @@ Hello everyone, I made this edit a couple of days ago and gave it to the Real Me
 ### Optional Dependencies
 
 >[EssentialMode Base](https://forum.fivem.net/t/release-essentialmode-base/3665)
+>
+## Required Dependencies
+>[pNotify](https://forum.fivem.net/t/release-pnotify-in-game-js-notifications-using-noty/20659)
 
 ### Installation
 
