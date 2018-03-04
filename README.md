@@ -1,3 +1,6 @@
+## Original version and all credit for the base script goes to [TheSpartaPT](https://github.com/TheSpartaPT/FiveM-ES-CarWash)
+I only added the pNotify parts and made them work correctly.
+
 # FiveM [EssentialMode] CarWash
 
 Quick Disclaimer: this script is an edited version of [this one](https://forum.fivem.net/t/release-carwash-updated/9615), to add a payment functionality nothing else!
