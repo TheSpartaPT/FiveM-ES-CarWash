@@ -73,7 +73,7 @@ AddEventHandler('es_carwash:success', function (price)
 	SetVehicleDirtLevel(GetVehiclePedIsUsing(GetPlayerPed(-1)))
 	-- es_carwash_DrawNotification("Your vehicle was ~y~cleaned~s~! ~g~-$" .. price .. "~s~!")
 	TriggerEvent("pNotify:SendNotification",{
-            text = "<font color=lightblue>Car Wash</font>:<br /> We cleaner 'er up for ya!<br />That'll be $<font color=lightgreen>" .. price .. ".00</font> please.",
+            text = "<font color=lightblue>Car Wash</font>:<br /> We cleaned 'er up for ya!<br />That'll be $<font color=lightgreen>" .. price .. ".00</font> please.",
             type = "error",
             timeout = (7000),
             layout = "centerLeft",
